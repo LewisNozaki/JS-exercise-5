@@ -1,5 +1,6 @@
 "use strict";
 
+// Solution 1
 const moveZeros = arr => {
   // TODO: Program me
   let zeroArr = [];
@@ -13,4 +14,12 @@ const moveZeros = arr => {
   });
   
   return [...filteredArr, ...zeroArr];
-}
+};
+
+// Solution 2
+const moveZeros = arr => {
+  return [
+    ...(arr.filter(n => n !== 0)),
+    ...(arr.filter(n => n === 0))
+  ];
+};
